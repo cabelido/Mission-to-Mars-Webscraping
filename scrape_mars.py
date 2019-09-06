@@ -29,7 +29,7 @@ def scrape():
     # Pause to give browser time to load and read
     time.sleep(10)
     
-    # Create bs object and use lxml as an HTML parser
+    # Create bs object and use html.parser as  HTML parser
     soup = bs(browser.html, 'html.parser')
     
     # Scrape/pull list of class = content_title with an a tag
@@ -150,7 +150,6 @@ def scrape():
 
     # For each line in hem_data, parse title using h3 tag and extracting the text
     # Remove "Enhanced" from each title.
-
     # Save base url as a variable and add link. Use each resulting url to find the image url
     # utilizing the class, downloads  with a tag and extracting the href. Add the list to the 
     # mars dictionary 
